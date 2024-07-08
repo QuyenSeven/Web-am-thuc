@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post</title>
+  </head>
+  <body>
+    <div
+      class="container-fluid bg-light d-flex flex-column post-content"
+      id="post-tab-content"
+    >
+      <!-- Thẻ span nằm ở trên trái -->
+      <div class="text-uppercase title-post-content mt-4">
+        <span>Bài viết của khách hàng</span>
+      </div>
+      <!-- Span và select box -->
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex m-2">
+          <span>Số lượng hiển thị: </span>
+          <select class="form-select form-select-post">
+            <!-- options -->
+            <option disabled class="middle-tr">số lượng</option>
+
+            <option value="10" class="middle-tr">10</option>
+            <option value="20" class="middle-tr">20</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          class="form-control post-search-input"
+          placeholder="Search..."
+          id="search-input-post"
+        />
+      </div>
+      <!-- Btn icon và Table -->
+      <div
+        class="d-flex justify-content-end align-items-start table-post-container"
+      >
+        <!-- Btn là icon -->
+        <button class="btn btn-sort mx-auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M22.629 31.5615C22.8838 31.5615 23.1282 31.4449 23.3084 31.2374C23.4886 31.0299 23.5898 30.7485 23.5898 30.455V4.35711L29.6349 11.3214C29.8153 11.5292 30.06 11.6459 30.3152 11.6459C30.5703 11.6459 30.815 11.5292 30.9954 11.3214C31.1758 11.1136 31.2771 10.8318 31.2771 10.538C31.2771 10.2442 31.1758 9.96238 30.9954 9.75461L23.3092 0.902621C23.22 0.799576 23.114 0.717822 22.9972 0.66204C22.8805 0.606258 22.7554 0.577545 22.629 0.577545C22.5026 0.577545 22.3775 0.606258 22.2608 0.66204C22.1441 0.717822 22.038 0.799576 21.9488 0.902621L14.2627 9.75461C14.0822 9.96238 13.9809 10.2442 13.9809 10.538C13.9809 10.8318 14.0822 11.1136 14.2627 11.3214C14.4431 11.5292 14.6877 11.6459 14.9429 11.6459C15.198 11.6459 15.4427 11.5292 15.6231 11.3214L21.6683 4.35711V30.455C21.6683 30.7485 21.7695 31.0299 21.9497 31.2374C22.1298 31.4449 22.3742 31.5615 22.629 31.5615ZM9.17827 0.579523C9.43308 0.579523 9.67746 0.6961 9.85764 0.903609C10.0378 1.11112 10.139 1.39256 10.139 1.68602V27.7839L16.1842 20.8196C16.3646 20.6118 16.6093 20.4951 16.8644 20.4951C17.1195 20.4951 17.3642 20.6118 17.5446 20.8196C17.725 21.0274 17.8264 21.3092 17.8264 21.603C17.8264 21.8968 17.725 22.1786 17.5446 22.3864L9.8585 31.2384C9.76925 31.3414 9.66323 31.4232 9.5465 31.479C9.42978 31.5348 9.30465 31.5635 9.17827 31.5635C9.0519 31.5635 8.92677 31.5348 8.81004 31.479C8.69332 31.4232 8.5873 31.3414 8.49805 31.2384L0.811909 22.3864C0.631503 22.1786 0.530151 21.8968 0.530151 21.603C0.530151 21.3092 0.631503 21.0274 0.811909 20.8196C0.992316 20.6118 1.237 20.4951 1.49213 20.4951C1.74727 20.4951 1.99195 20.6118 2.17236 20.8196L8.21751 27.7839V1.68602C8.21751 1.39256 8.31873 1.11112 8.49891 0.903609C8.67909 0.6961 8.92346 0.579523 9.17827 0.579523Z"
+              fill="#444444"
+            />
+          </svg>
+        </button>
+        <!-- Table -->
+        <table class="table table-borderless table-fixed">
+          <!-- Table body -->
+          <thead>
+            <tr>
+              <th class="column-1">Người đăng</th>
+              <th class="column-2">Ngày đăng</th>
+              <th class="column-3">Tên tiêu đề</th>
+              <th class="column-4"></th>
+            </tr>
+          </thead>
+          <tbody class="table-content position-relative">
+            <!-- Dòng 1 -->
+            <tr>
+              <td class="column-1">Trần Văn Đoàn</td>
+              <td class="column-2">01/01/2022</td>
+              <td class="column-3">PHO</td>
+              <td class="column-4">
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <!-- Dòng 2 -->
+            <tr>
+              <td class="column-1">Người B</td>
+              <td class="column-2">01/01/2022</td>
+              <td class="column-3">Tiêu đề 2</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người B</td>
+              <td class="column-2">02/01/2022</td>
+              <td class="column-3">Tiêu đề 5</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người D</td>
+              <td class="column-2">02/01/2022</td>
+              <td class="column-3">Tiêu đề 7</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người C</td>
+              <td class="column-2">02/01/2022</td>
+              <td class="column-3">Tiêu đề 12</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người Z</td>
+              <td class="column-2">01/01/2022</td>
+              <td class="column-3">Tiêu đề 10</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người E</td>
+              <td class="column-2">02/01/2022</td>
+              <td class="column-3">Tiêu đề 34</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người B</td>
+              <td class="column-2">05/01/2022</td>
+              <td class="column-3">Tiêu đề 90</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người C</td>
+              <td class="column-2">05/01/2022</td>
+              <td class="column-3">Tiêu đề 101</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người S</td>
+              <td class="column-2">03/01/2022</td>
+              <td class="column-3">Tiêu đề 14</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="column-1">Người F</td>
+              <td class="column-2">05/01/2022</td>
+              <td class="column-3">Tiêu đề 96</td>
+              <td class="column-4">
+                <!-- Các chức năng, ví dụ: Button xoá -->
+                <button class="btn btn-func approve-btn">Phê duyệt</button>
+                <button class="btn btn-func delete-btn">Xoá</button>
+                <button class="btn btn-func xem-btn">Xem</button>
+              </td>
+            </tr>
+            <!-- Thêm các dòng khác tương tự cho dữ liệu khác -->
+          </tbody>
+        </table>
+        <span class="empty-table-msg position-fixed" style="display: none"
+          >Không có dữ liệu</span
+        >
+      </div>
+
+      <!-- 2 Btn và các số nằm ở giữa 2 btn -->
+      <div
+        class="d-flex justify-content-end align-items-end mt-auto mb-4 btn-post-br"
+      >
+        <button class="btn btn-secondary m-4" id="btnPrev">Trước</button>
+        <div id="pageNumbers" class="m-4"></div>
+        <button class="btn btn-secondary m-4" id="btnNext">Sau</button>
+      </div>
+    </div>
+    <!-- user-post -->
+    <div class="container-fluid" id="user-post" style="display: none">
+      <div class="d-flex align-items-center mb-4 header bg-light">
+        <button class="btn" id="back-post-button">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </button>
+        <div class="d-flex align-items-center m-4">
+          <img
+            src=""
+            alt="User"
+            id="user-image"
+            style="width: 50px; height: 50px; border-radius: 50%"
+          />
+          <div class="ms-3">
+            <span id="user-name"></span><br />
+            <span id="post-date">Ngày đăng: 2024-06-08</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-post bg-ligth">
+        <div class="overlay p-0">
+          <h1 class="display-1 fw-bold text-dark text-center">
+            <p class="title-detail" style="font-size: 100px">PHO</p>
+            <p>Món ăn Việt nổi tiếng</p>
+          </h1>
+        </div>
+        <div>
+          <h1 class="display-1 text-center py-5 fw-bolder">
+            Nguyên liệu chính
+          </h1>
+          <div class="d-flex justify-content-between mx-5 mt-3">
+            <div class=" ">
+              <div
+                class="card p-3 shadow p-3 mb-5 bg-body"
+                style="width: 300px; height: 300px; border-radius: 20px"
+              >
+                <img
+                  class="card-img-top mx-auto"
+                  src="./assets/img/img-detail/ingredient1.png"
+                  alt="Card image"
+                  style="height: 143px; width: 143px"
+                />
+                <div class="card-body">
+                  <h4 class="card-title text-center">Pho noodles</h4>
+                </div>
+              </div>
+            </div>
+            <div class=" ">
+              <div
+                class="card p-3 shadow p-3 mb-5 bg-body"
+                style="width: 300px; height: 300px; border-radius: 20px"
+              >
+                <img
+                  class="card-img-top mx-auto"
+                  src="./assets/img/img-detail/ingredient2.png"
+                  alt="Card image"
+                  style="height: 143px; width: 143px"
+                />
+                <div class="card-body">
+                  <h4 class="card-title text-center">Thịt Lợn/Bò/Gà</h4>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div
+                class="card p-3 shadow p-3 mb-5 bg-body"
+                style="width: 300px; height: 300px; border-radius: 20px"
+              >
+                <img
+                  class="card-img-top mx-auto"
+                  src="./assets/img/img-detail/ingredient3.png"
+                  alt="Card image"
+                  style="height: 143px; width: 143px"
+                />
+                <div class="card-body">
+                  <h4 class="card-title text-center">Rau Xanh</h4>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div
+                class="card p-3 shadow p-3 mb-5 bg-body"
+                style="width: 300px; height: 300px; border-radius: 20px"
+              >
+                <img
+                  class="card-img-top mx-auto"
+                  src="./assets/img/img-detail/ingredient4.png"
+                  alt="Card image"
+                  style="height: 143px; width: 143px"
+                />
+                <div class="card-body">
+                  <h4 class="card-title text-center">Nước dùng</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 m-5 d-flex">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              width="914px"
+              height="100%"
+              src="https://www.youtube.com/embed/WlosNFMCnE4"
+              title="Legit Vietnamese Pho At Home"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="rounded-top-right bg-secondary p-3">
+            <h1 class="text-light">How to make Pho - Easy 30mins recipe</h1>
+            <p class="text-light pt-5" style="font-size: 24px">
+              Experience the magic of one of the greatest noodle soups in the
+              world with this easy to follow traditional Vietnamese Pho recipe!
+              Made from scratch with the signature broth that’s light yet at the
+              same time so full of flavour, it’s infused with spices like
+              cinnamon, star anise and cardamom. The soup is utterly addictive
+              and every spoonful leaves you wanting more!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

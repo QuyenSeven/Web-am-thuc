@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-light person-content">
+      <div class="title-person text-uppercase mt-4">
+        <span>Quản lý người dùng</span>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex m-2">
+          <span>Số lượng hiển thị: </span>
+          <select class="person-select-form">
+            <option disabled class="middle-tr">số lượng</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search..."
+          id="person-search-input"
+        />
+      </div>
+
+      <div class="table-container d-flex justify-content-end align-items-start">
+        <button class="btn btn-person-sort mx-auto">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M22.629 31.5615C22.8838 31.5615 23.1282 31.4449 23.3084 31.2374C23.4886 31.0299 23.5898 30.7485 23.5898 30.455V4.35711L29.6349 11.3214C29.8153 11.5292 30.06 11.6459 30.3152 11.6459C30.5703 11.6459 30.815 11.5292 30.9954 11.3214C31.1758 11.1136 31.2771 10.8318 31.2771 10.538C31.2771 10.2442 31.1758 9.96238 30.9954 9.75461L23.3092 0.902621C23.22 0.799576 23.114 0.717822 22.9972 0.66204C22.8805 0.606258 22.7554 0.577545 22.629 0.577545C22.5026 0.577545 22.3775 0.606258 22.2608 0.66204C22.1441 0.717822 22.038 0.799576 21.9488 0.902621L14.2627 9.75461C14.0822 9.96238 13.9809 10.2442 13.9809 10.538C13.9809 10.8318 14.0822 11.1136 14.2627 11.3214C14.4431 11.5292 14.6877 11.6459 14.9429 11.6459C15.198 11.6459 15.4427 11.5292 15.6231 11.3214L21.6683 4.35711V30.455C21.6683 30.7485 21.7695 31.0299 21.9497 31.2374C22.1298 31.4449 22.3742 31.5615 22.629 31.5615ZM9.17827 0.579523C9.43308 0.579523 9.67746 0.6961 9.85764 0.903609C10.0378 1.11112 10.139 1.39256 10.139 1.68602V27.7839L16.1842 20.8196C16.3646 20.6118 16.6093 20.4951 16.8644 20.4951C17.1195 20.4951 17.3642 20.6118 17.5446 20.8196C17.725 21.0274 17.8264 21.3092 17.8264 21.603C17.8264 21.8968 17.725 22.1786 17.5446 22.3864L9.8585 31.2384C9.76925 31.3414 9.66323 31.4232 9.5465 31.479C9.42978 31.5348 9.30465 31.5635 9.17827 31.5635C9.0519 31.5635 8.92677 31.5348 8.81004 31.479C8.69332 31.4232 8.5873 31.3414 8.49805 31.2384L0.811909 22.3864C0.631503 22.1786 0.530151 21.8968 0.530151 21.603C0.530151 21.3092 0.631503 21.0274 0.811909 20.8196C0.992316 20.6118 1.237 20.4951 1.49213 20.4951C1.74727 20.4951 1.99195 20.6118 2.17236 20.8196L8.21751 27.7839V1.68602C8.21751 1.39256 8.31873 1.11112 8.49891 0.903609C8.67909 0.6961 8.92346 0.579523 9.17827 0.579523Z"
+              fill="#444444"
+            />
+          </svg>
+        </button>
+        <table class="table table-borderless table-person">
+          <thead>
+            <tr>
+              <th class="col-person-1">Ảnh đại diện</th>
+              <th class="col-person-2">Tên người dùng</th>
+              <th class="col-person-3">Email</th>
+              <th class="col-person-4">Trạng thái</th>
+              <th class="col-person-5"></th>
+            </tr>
+          </thead>
+          <tbody class="table-person-content">
+            <!-- Table data goes here -->
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/1.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Trần Văn Đoàn</td>
+              <td class="col-person-3">doantran@gmail.com</td>
+              <td class="col-person-4">Online</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-2"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/2.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Nguyễn Thị Yến</td>
+              <td class="col-person-3">yennguyen@gmail.com</td>
+              <td class="col-person-4">1 giờ trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-1"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/3.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Bùi Quốc Anh</td>
+              <td class="col-person-3">quocanh@gmail.com</td>
+              <td class="col-person-4">30 phút trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-3"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/5.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Phạm Tiến Cảnh</td>
+              <td class="col-person-3">tiencanh@gmail.com</td>
+              <td class="col-person-4">1 ngày trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-2"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/6.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Phạm Văn Việt</td>
+              <td class="col-person-3">vietpham@gmail.com</td>
+              <td class="col-person-4">5 ngày trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-1"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/7.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Trần Trâm Anh</td>
+              <td class="col-person-3">tramanh@gmail.com</td>
+              <td class="col-person-4">Online</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-3"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/8.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Bùi Việt Quang</td>
+              <td class="col-person-3">vietquang@gmail.com</td>
+              <td class="col-person-4">30 giây trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-1"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/9.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Lê Quang Trường</td>
+              <td class="col-person-3">quangtruong@gmail.com</td>
+              <td class="col-person-4">Online</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-3"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/11.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Đỗ Xuân Hiếu</td>
+              <td class="col-person-3">xuanhieu@gmail.com</td>
+              <td class="col-person-4">2 ngày trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-2"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/12.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Phạm Thanh Xuân</td>
+              <td class="col-person-3">thanhxuan@gmail.com</td>
+              <td class="col-person-4">Online</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-3"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="col-person-1">
+                <img src="./assets/img/team/4.jpg" alt="" />
+              </td>
+              <td class="col-person-2">Đỗ Yến Chi</td>
+              <td class="col-person-3">yenchi@gmail.com</td>
+              <td class="col-person-4">5 phút trước</td>
+              <td class="col-person-5">
+                <button
+                  class="btn btn-action infor-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                  data-header-color="modal-header-1"
+                >
+                  Xem
+                </button>
+                <button class="btn btn-action remove-btn">Xoá</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <span
+          class="empty-person-table-msg position-fixed"
+          style="display: none"
+          >Không có dữ liệu</span
+        >
+      </div>
+      <div
+        class="d-flex justify-content-end align-items-end mt-auto mb-4 btn-br"
+      >
+        <button class="btn btn-action m-4" id="prevBtn">Trước</button>
+        <div id="personPageNumbers" class="m-4"></div>
+        <button class="btn btn-action m-4" id="nextBtn">Sau</button>
+      </div>
+    </div>
+    <div
+      class="modal fade person-modal"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center">
+            <img
+              id="modalUserImage"
+              src="./assets/img/team/1.jpg"
+              alt="Avatar"
+              class="img-fluid mb-1"
+            />
+            <h4 id="modalUserName">Phạm Duy Khánh</h4>
+          </div>
+          <div
+            class="modal-footer d-flex flex-column justify-content-start align-items-start"
+          >
+            <span id="modalUserEmail">Email: duykhanh23@gmail.com</span>
+            <span
+              >Tiểu sử: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
